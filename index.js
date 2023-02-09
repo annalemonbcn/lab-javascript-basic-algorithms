@@ -34,8 +34,11 @@ for(let i = hacker2.length-1; i >= 0; i--){
 }
 console.log(hacker2Reverse);
 
-// Depending on the lexicographic order of the strings, print:
-
-// The driver's name goes first.
-// Yo, the navigator goes first definitely.
-// What?! You both have the same name?
+// Depending on the lexicographic order of the strings
+if(hacker1.localeCompare(hacker2) === 1){
+  console.log("The driver's name goes first.");
+} else if (hacker1.localeCompare(hacker2) === -1){
+  console.log("Yo, the navigator goes first definitely.");
+} else {
+  console.log("What?! You both have the same name?");
+}
