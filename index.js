@@ -42,3 +42,30 @@ if(hacker1.localeCompare(hacker2) === 1){
 } else {
   console.log("What?! You both have the same name?");
 }
+
+/* BONUS 1 */
+let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium feugiat sagittis. Proin massa metus, ultrices id dapibus sit amet, maximus sed massa. Sed consequat dictum mi ut feugiat. Donec id aliquet ipsum. Praesent leo enim, eleifend non lorem eget, venenatis luctus metus. Vestibulum blandit bibendum lorem quis pulvinar. Donec hendrerit lorem id eleifend congue. Nunc id urna vel nunc condimentum feugiat. Aliquam placerat, lorem nec mattis auctor, tellus orci gravida nisi, non ultricies tellus velit sed quam. In bibendum arcu est, id tincidunt dui dapibus id. Proin tristique lorem mollis tortor auctor dapibus. Nulla egestas libero vitae quam hendrerit, nec lobortis nisi gravida. Sed vitae neque sit amet est sollicitudin volutpat ut quis tellus. Etiam eu odio feugiat, congue arcu ac, congue eros. Nam rhoncus, neque et tempor eleifend, eros mi tristique erat, vitae volutpat velit augue ullamcorper diam. Nunc vitae mi eu lacus varius tincidunt. Morbi non auctor nisi. Ut massa nulla, dignissim a sapien nec, porta lacinia augue. Integer erat nibh, vulputate ac orci accumsan, pellentesque hendrerit urna. Nunc facilisis porttitor tellus a ultricies. Etiam sodales volutpat felis vel varius. Sed in enim nec risus volutpat feugiat ac non urna. Quisque scelerisque urna vel efficitur viverra. Mauris vel turpis justo. Nulla ac nulla suscipit, pharetra nunc a, ultricies urna. Curabitur laoreet, orci non dapibus pellentesque, eros diam fringilla diam, a porta lacus erat et augue. Sed sem turpis, porta eget nibh sollicitudin, venenatis sagittis arcu. Integer ac pharetra quam. Etiam facilisis enim urna, non bibendum erat tincidunt et. Ut pulvinar, felis a malesuada feugiat, neque quam vehicula felis, eu commodo tortor arcu et felis. Aenean eleifend quam id condimentum iaculis. Sed nec sem rutrum, vehicula velit ultrices, bibendum velit. Phasellus molestie ante elit, nec rutrum metus aliquam eu. Pellentesque efficitur turpis sed elementum ultricies.";
+let longTextArr = longText.split(" ");
+
+// COUNT TOTAL WORDS
+// Opt 1:
+console.log(longTextArr.length);
+
+// Opt 2:
+let totalWords = 1;
+for(let i = 0; i < longText.length; i++){
+  if(longText[i] === " "){
+    totalWords += 1;
+  }
+}
+console.log(totalWords);
+
+// COUNT TOTAL ET
+let totalEt = 0;
+for (let i = 0; i < longTextArr.length; i++){
+  if(longTextArr[i].includes('et') === true){
+    totalEt += 1;
+  }
+}
+
+console.log(totalEt);
